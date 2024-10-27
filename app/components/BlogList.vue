@@ -1,21 +1,17 @@
 <script setup lang="ts">
 import { format } from '@formkit/tempo'
-// import type { QueryBuilderParams } from '@nuxt/content'
+import type { QueryBuilderParams } from '@nuxt/content'
 
-// const path = defineModel<string>('/')
-
-// const query: QueryBuilderParams = {
-//   path: '/',
-//   // where: [
-//   //   { tags: { $contains: 'react' } },
-//   // ],
-// }
+defineProps<{
+  query?: QueryBuilderParams
+}>()
 </script>
 
 <template>
   <div class="flex flex-col gap-8">
     <ContentList
       v-slot="{ list }"
+      :query="query"
     >
       <div
         v-for="article in list"

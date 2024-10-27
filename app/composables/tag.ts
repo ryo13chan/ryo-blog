@@ -9,4 +9,5 @@ export const tags: Tag[] = [
   { key: 'react', label: 'React' },
 ]
 
-export const getTag = (key: string): Tag | undefined => tags.find(tag => tag.key === key)
+export const getTag = (key?: string): Tag | undefined => tags.find(tag => tag.key === key)
+export const tagLabel = (tag?: Tag | null) => tag ? tag.label : ''
