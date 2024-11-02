@@ -17,7 +17,7 @@ const query = computed(() => {
 
 <template>
   <div>
-    <h2 class="text-4xl">
+    <h2 class="text-center mt-0">
       {{ tagLabel(tag) }}
     </h2>
     <BlogList :query="query" />
