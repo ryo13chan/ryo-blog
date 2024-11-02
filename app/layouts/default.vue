@@ -1,17 +1,20 @@
 <script setup lang="ts">
-
+const route = useRoute()
 </script>
 
 <template>
   <div class="flex lg:justify-between gap-8 flex-col lg:flex-row">
-    <main class="flex-1">
+    <main class="flex-1 prose">
       <slot />
     </main>
-    <aside class="lg:w-80">
-      <div class="text-xl mb-2 font-bold">
-        Tag
+    <aside class="lg:w-80 sticky top-0 h-full">
+      <div class="flex flex-col gap-8">
+        <TableOfContents
+          v-if="route.name === 'slug'"
+          :path="route.path"
+        />
+        <TagList />
       </div>
-      <TagList />
     </aside>
   </div>
 </template>

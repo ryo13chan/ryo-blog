@@ -8,7 +8,7 @@ const path = defineModel<string>('/')
   <ContentDoc :path="path">
     <template #default="{ doc }">
       <span>{{ format(doc.createdAt, 'YYYY-MM-DD') }}</span>
-      <h2 class="text-4xl mb-2 font-bold">
+      <h2 class="text-4xl">
         {{ doc.title }}
       </h2>
       <div class="flex gap-2 my-2">

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="text-4xl mb-4 font-bold">
+    <h2 class="text-4xl">
       Blog
     </h2>
     <BlogList />

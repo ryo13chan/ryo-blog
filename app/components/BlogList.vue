@@ -18,11 +18,10 @@ defineProps<{
         :key="article._path"
       >
         <span>{{ format(article.createdAt, 'YYYY-MM-DD') }}</span>
-        <NuxtLink
-          :to="article._path"
-          class="font-bold text-lg hover:underline"
-        >
-          <h2>{{ article.title }}</h2>
+        <NuxtLink :to="article._path">
+          <h2 class="m-0">
+            {{ article.title }}
+          </h2>
         </NuxtLink>
         <div class="flex gap-2 mt-2">
           <template
