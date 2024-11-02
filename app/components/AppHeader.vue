@@ -4,8 +4,13 @@
   >
     <NuxtLink to="/">
       <h1 class="m-0">
-        Ryo Blog
-      </h1>
+        <div class="flex gap-4 items-center">
+          <AppAvatar
+            file-name="icon.jpg"
+            circle
+          />
+          <span>Ryo Blog</span>
+        </div></h1>
     </NuxtLink>
     <!-- TODO: カラー切り替え -->
   </header>

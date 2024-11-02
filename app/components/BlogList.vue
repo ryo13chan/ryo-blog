@@ -17,6 +17,7 @@ defineProps<{
         v-for="article in list"
         :key="article._path"
       >
+        <!-- TODO: newラベル -->
         <span>{{ format(article.createdAt, 'YYYY-MM-DD') }}</span>
         <NuxtLink :to="article._path">
           <h2 class="m-0">
