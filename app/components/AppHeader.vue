@@ -1,6 +1,6 @@
 <template>
   <header
-    class="w-full px-4 lg:px-8 py-4 border-b border-surface"
+    class="w-full px-4 lg:px-8 py-4 border-b border-surface flex justify-between items-center"
   >
     <NuxtLink to="/">
       <h1 class="m-0 text-2xl">
@@ -12,6 +12,6 @@
           <span>Ryo Blog</span>
         </div></h1>
     </NuxtLink>
-    <!-- TODO: カラー切り替え -->
+    <ColorButton />
   </header>
 </template>
