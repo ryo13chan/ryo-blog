@@ -20,10 +20,10 @@ const isNewArticle = (date: string) => {
         class="mr-2"
       />
       <span>{{ format(doc.createdAt, 'YYYY-MM-DD') }}</span>
-      <h2 class="text-4xl">
+      <h2 class="text-4xl mt-0 mb-4">
         {{ doc.title }}
       </h2>
-      <div class="flex gap-2 my-2">
+      <div class="flex gap-2 mb-16">
         <template
           v-for="tag in doc.tags"
           :key="tag"
