@@ -13,6 +13,12 @@ const query = computed(() => {
     ],
   }
 })
+
+useHead(() => {
+  return {
+    title: tag.value ? tag.value.label : '',
+  }
+})
 </script>
 
 <template>
