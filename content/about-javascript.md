@@ -1,6 +1,6 @@
 ---
 title: JavaScriptについて
-createdAt: 2024-10-26
+createdAt: 2024-10-28
 tags: ['javascript']
 ---
 

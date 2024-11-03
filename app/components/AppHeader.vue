@@ -1,9 +1,9 @@
 <template>
   <header
-    class="w-full px-4 lg:px-8 py-2 border-b border-surface"
+    class="w-full px-4 lg:px-8 py-4 border-b border-surface"
   >
     <NuxtLink to="/">
-      <h1 class="m-0">
+      <h1 class="m-0 text-2xl">
         <div class="flex gap-4 items-center">
           <AppAvatar
             file-name="icon.jpg"

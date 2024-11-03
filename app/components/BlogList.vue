@@ -1,10 +1,16 @@
 <script setup lang="ts">
-import { format } from '@formkit/tempo'
+import { format, diffDays } from '@formkit/tempo'
 import type { QueryBuilderParams } from '@nuxt/content'
 
 defineProps<{
   query?: QueryBuilderParams
 }>()
+
+const isNewArticle = (date: string) => {
+  const now = new Date()
+  const createdAt = new Date(date)
+  return diffDays(now, createdAt) < 7
+}
 </script>
 
 <template>
@@ -17,7 +23,12 @@ defineProps<{
         v-for="article in list"
         :key="article._path"
       >
-        <!-- TODO: newラベル -->
+        <Tag
+          v-if="isNewArticle(article.createdAt)"
+          value="New"
+          severity="contrast"
+          class="mr-2"
+        />
         <span>{{ format(article.createdAt, 'YYYY-MM-DD') }}</span>
         <NuxtLink :to="article._path">
           <h2 class="m-0">
