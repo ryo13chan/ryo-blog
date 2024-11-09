@@ -10,7 +10,7 @@ const route = useRoute()
         <slot />
       </main>
       <aside class="lg:w-80 lg:sticky lg:top-0 lg:h-full lg:py-4 px-16 lg:px-0 py-4">
-        <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-8 lg:pr-8">
           <TableOfContents
             v-if="route.name === 'slug'"
             :path="route.path"
