@@ -32,5 +32,6 @@ const path = defineModel<string>('/')
         </div>
       </div>
     </template>
+    <template #not-found />
   </ContentDoc>
 </template>

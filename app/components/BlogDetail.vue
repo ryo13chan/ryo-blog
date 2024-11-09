@@ -36,5 +36,6 @@ const isNewArticle = (date: string) => {
       </div>
       <ContentRenderer :value="doc" />
     </template>
+    <template #not-found />
   </ContentDoc>
 </template>
