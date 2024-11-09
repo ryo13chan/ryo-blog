@@ -22,7 +22,7 @@ useHead(() => {
 </script>
 
 <template>
-  <div>
+  <div v-if="tag">
     <h2 class="text-center mt-0">
       {{ tagLabel(tag) }}
     </h2>
