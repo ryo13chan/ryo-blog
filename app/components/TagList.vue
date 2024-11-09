@@ -8,7 +8,7 @@
     </div>
     <div class="flex flex-wrap gap-2">
       <TagButton
-        v-for="tag in tags"
+        v-for="tag in tags.sort((a, b) => a.key.localeCompare(b.key))"
         :key="tag.key"
         :tag="tag"
       />
