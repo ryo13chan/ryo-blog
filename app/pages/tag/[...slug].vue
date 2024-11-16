@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { QueryBuilderParams } from '@nuxt/content'
+
 const route = useRoute()
 const tag = computed(() => {
   const slug = route.params.slug
@@ -6,11 +8,12 @@ const tag = computed(() => {
   return getTag(slug[0])
 })
 
-const query = computed(() => {
+const query: QueryBuilderParams = computed(() => {
   return {
     where: [
       tag.value ? { tags: { $contains: tag.value.key } } : {},
     ],
+    sort: [{ createdAt: -1 }],
   }
 })
 

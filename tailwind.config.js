@@ -5,5 +5,5 @@ export default {
     extend: {},
   },
   darkMode: 'class',
-  plugins: [require('tailwindcss-primeui')],
+  plugins: [require('tailwindcss-primeui'), require('@tailwindcss/typography')],
 }
